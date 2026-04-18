@@ -1,14 +1,13 @@
 server:
-  port: 8080
+  port: 9090
 
 spring:
   application:
     name: redisinterface
   data:
     redis:
-      host: redis-10157.c282.east-us-mz.azure.cloud.redislabs.com
-      port: 10157
-      password: Mm9WGZd1valoG8uYndtK4YXRNJEfFe8w
+      host: localhost
+      port: 6379
       timeout: 60000
       jedis:
         pool:

@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: redisinterface
@@ -5,10 +8,28 @@ spring:
     redis:
       host: redis-10157.c282.east-us-mz.azure.cloud.redislabs.com
       port: 10157
-      password: KDA29okWCuQJhypSLt13WUKlLCuvt1Jm
+      password: Mm9WGZd1valoG8uYndtK4YXRNJEfFe8w
+      timeout: 60000
+      jedis:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
     enabled: true
   api-docs:
     path: /v3/api-docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+
